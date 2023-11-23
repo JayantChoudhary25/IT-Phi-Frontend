@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+.hero-section{
+  background: url("/images/hero.png");
+  /* height: 100vh; */
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+h1{
+  font-size: 70px;
+}
+
+
+@media only screen and (max-width: 1600px){
+  h1{
+    font-size: 50px;
+    
+  }
+}
+@media only screen and (min-width: 1536px){
+  .container {
+    max-width: 1480px;
+  }
+}
+  
+@media only screen and (max-width: 1400px){
+  .hero-section{
+    height: 100vh;
+  }
+}
+  
+@media only screen and (max-width: 1024px){
+  .hero-section{
+    height: auto;
+  }
+}
+  
+
+@media only screen and (max-width: 767px){
+  
+  .hero-section{
+    background: url("/images/m_bg.png");
+    height: auto;
+    background-size: contain;
+  }
+  h1{
+    font-size: 30px;
+    text-align: center;
+  }
+
+}
