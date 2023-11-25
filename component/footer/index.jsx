@@ -18,30 +18,28 @@ const Footer = () => {
 
   return (
     <>
-      <section className="bg-[#133239] text-white">
+      <section className="bg-primary  text-main">
         <div className="container mx-auto">
           <div className="flex flex-wrap lg:flex-nowrap gap-y-10 lg:gap-x-5 xl:gap-x-10 2xl:gap-x-20 py-[30px] lg:py-[80px] justify-between  ">
-            <div className=" flex flex-col gap-5 lg:gap-8 w-full sm:w-[40%] md:w-[25%]">
+            <div className=" flex flex-col gap-3 w-full sm:w-[40%] md:w-[25%]">
               <div className="">
-                {/* <img src="/svg/logo.svg" alt="Logo" className="w-[150px]" />
-                 */}
-                  <h1 className="text-primary text-[30px] font-bold whitespace-nowrap">IT Phi Pvt. Ltd</h1>
+                <Link href="/">
+                  <img src="/svg/logo/logo-white.svg" alt="Logo." className="max-w-[150px]" />
+                </Link>
               </div>
-              <p className="text-[16px] font-medium leading-[24px] text-white ">
-              IT Phi Pvt. Ltd, just not a team of passionate and skilled experts, rather it’s a hub of new possibilities, innovations, development and business affluence; to accompany you for your significant success.
+              <p className="ext-[15px] xl:text-[16px] font-normal leading-[24px">
+                IT Phi Pvt. Ltd, just not a team of passionate and skilled experts, rather it’s a hub of new possibilities, innovations, development and business affluence; to accompany you for your significant success.
               </p>
             </div>
-
-
             <div className="">
-              <h6 className="text-[20px] font-bold  leading-[26px] text-white">
+              <h6 className="text-[20px] font-bold  leading-[26px]">
                 Quick links
               </h6>
               <ul className="inline-flex flex-col gap-4 pt-[20px]">
                 {menusList1.map((list, inx) => (
                   <li
                     key={inx}
-                    className="text-[15px] xl:text-[16px] font-medium leading-[24px] capitalize"
+                    className="text-[15px] xl:text-[16px] font-normal leading-[24px] capitalize cursor-pointer"
                   >
                     {list}
                   </li>
@@ -51,13 +49,13 @@ const Footer = () => {
 
             <div className="">
               <h6 className="text-[20px] font-bold  leading-[26px] ">
-            Information
+                Information
               </h6>
-              <ul className="inline-flex flex-col gap-4 pt-[20px]">
+              <ul className="inline-flex flex-col gap-4 pt-[20px] z-[999]">
                 {menuList3.map((list, inx) => (
                   <li
                     key={inx}
-                    className="text-[15px] xl:text-[16px] font-medium leading-[24px] capitalize"
+                    className="text-[15px] xl:text-[16px] font-normal leading-[24px] capitalize cursor-pointer"
                   >
                     {list}
                   </li>
@@ -67,14 +65,14 @@ const Footer = () => {
 
 
             <div className=" flex flex-col gap-5 lg:gap-8">
-              <p className="text-[18px] font-semibold  leading-[26px] text-white">
+              <p className="text-[18px] font-semibold  leading-[26px]">
                 Subscribe to our emails
               </p>
               <div className="border border-white flex justify-between px-4 h-[48px]">
                 <input
                   type="email"
                   placeholder="Email"
-                  className="border-none bg-[#133239] focus-visible:outline-none   placeholder:text-white text-[16px] font-normal  leading-[15px] text-white "
+                  className="border-none bg-[#133239] focus-visible:outline-none   placeholder:text-white text-[16px] font-normal  leading-[15px] "
                 />
                 <img src="/svg/arrow.svg" alt="" className="cursor-pointer" />
               </div>
@@ -96,13 +94,10 @@ const Footer = () => {
           </div>
 
           {/* bottom */}
-          <div className="flex flex-wrap-reverse sm:flex-nowrap  gap-y-3 md:gap-y-6 justify-center  sm:justify-between items-center py-4 border-t border-t-[#315031]">
-            <p className="text-[14px] font-normal text-[#A1A1A1] leading-[21px] text-white ">
+          <div className="flex flex-wrap-reverse sm:flex-nowrap  gap-y-3 md:gap-y-6 justify-center items-center py-4 border-t border-t-[#A1A1A1] text-center">
+            <p className="text-[14px] font-normal leading-[21px] ">
               © 2023 IT Phi Pvt. Ltd. All Rights Reserved.
             </p>
-            <div className="">
-              <img src="/svg/card.svg" alt="cards.." className="" />
-            </div>
           </div>
         </div>
       </section>

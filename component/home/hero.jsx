@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 const Herosection = () => {
   return (
-    <section className="bg-[#f9f9f9] py-[150px]">
+    <section className="py-[200px] text-white hero-section">
       <div className="container mx-auto ">
         <div className="flex lg:flex-row flex-col-reverse lg:justify-center lg:items-center text-center lg:text-left gap-x-20 gap-y-10 pt-1 lg:pt-[100px] ">
 
@@ -14,14 +14,14 @@ const Herosection = () => {
             data-aos-easing="ease-out-cubic"
             data-aos-duration="2000"
           >
-            <h1 className="font-bold text-[30px] lg:text-[42px] leading-[36px] lg:leading-[56px] uppercase text-black">
+            <h1 className="font-bold text-[30px] lg:text-[42px] leading-[36px] lg:leading-[56px] uppercase">
               CREATING WEBSITES THAT MAKE YOU STOP & STARE
             </h1>
 
-            <p className="font-medium text-[16px] lg:text-[18px] leading-[32px] text-black ">Accusantium quam, aliquam ultricies eget tempor id, aliquam eget nibh et. Maecen aliquam, risus at semper. Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum</p>
+            <p className="font-medium text-[16px] lg:text-[18px] leading-[32px] ">Accusantium quam, aliquam ultricies eget tempor id, aliquam eget nibh et. Maecen aliquam, risus at semper. Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum</p>
             <div className="mx-auto md:mx-0">
 
-              <button className="btn-primary"> Get Started </button>
+              <button className="btn-secondary"> Get Started </button>
 
             </div>
           </div>

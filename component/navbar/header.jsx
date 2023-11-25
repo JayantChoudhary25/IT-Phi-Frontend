@@ -32,38 +32,42 @@ const Header = () => {
       menu: "careers",
       path: "/careers"
     },
-    {
-      id: 4,
-      menu: "contact us",
-      path: "/contact-us"
-    },
+    // {
+    //   id: 4,
+    //   menu: "contact us",
+    //   path: "/contact-us"
+    // },
     ,
   ];
 
   return (
     <>
-      <main className="h-auto flex flex-col justify-center items-center bg-white fixed top-0 left-0 right-0 0px 2px 15px" id="header">
+      <main className="h-auto flex flex-col justify-center items-center bg-main fixed top-0 left-0 right-0 0px 2px 15px" id="header">
         <div className=" w-full">
           <div className="container mx-auto">
             <div className="lg:flex justify-between items-center hidden py-[15px]">
               <div className="md:w-[120px] xl:w-auto z-[999]">
-                {/* <img src="/svg/logo.svg" alt="Logo." /> */}
-                <Link href="#">
-                  <h1 className="text-primary text-[40px] font-bold">IT Phi Pvt. Ltd</h1>
+                <Link href="/">
+                  <img src="/svg/logo/logo-black.svg" alt="Logo." className="max-w-[150px]" />
                 </Link>
               </div>
               <div className="flex lg:gap-x-10  xl:gap-x-20  items-center">
                 <ul className="md:flex flex-row gap-14  lg:gap-x-10  xl:gap-x-10 hidden z-[999]">
                   {navItems.map((nav) => (
-                   <Link href={nav.path}>
-                    <li
-                      className="text-black  text-[15px] font-semibold leading-normal menu-list cursor-default uppercase hover:text-primary "
-                    >
-                      {nav.menu}
-                    </li>
-                   </Link>
+                    <Link href={nav.path}>
+                      <li
+                        className="text-black text-[15px] font-semibold leading-normal menu-list  uppercase hover:text-primary cursor-pointer "
+                      >
+                        {nav.menu}
+                      </li>
+                    </Link>
                   ))}
                 </ul>
+                <div className="">
+                  <Link href="/contact-us">
+                    <button className="btn-primary">contact us</button>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
@@ -73,8 +77,10 @@ const Header = () => {
         <div className="container mx-auto md:absolute md:top-0 ">
           <div className="lg:hidden flex justify-between items-center w-full px-4 py-4 z-[999] ">
             <div className="w-[100px] ">
-              {/* <img src="/svg/logo.svg" alt="Logo." /> */}
-              <h1 className="text-primary text-[30px] font-bold whitespace-nowrap">IT Phi Pvt. Ltd</h1>
+              <Link href="/">
+                <img src="/svg/logo-white.svg" alt="Logo." className="max-w-[150px]" />
+              </Link>
+              {/* <h1 className="text-primary text-[30px] font-bold whitespace-nowrap">IT Phi Pvt. Ltd</h1> */}
             </div>
             <div
               className=" h-[35px] w-[35px] cursor-pointer z-[999]"
@@ -94,9 +100,9 @@ const Header = () => {
               <ul className="flex flex-col gap-x-10 gap-y-8  px-[40px] py-8">
                 {navItems.map((nav) => (
                   <Link href={nav.path}>
-                  <li className="text-black  text-[16px] font-semibold leading-normal uppercase hover:text-primary ">
-                    {nav.menu}
-                  </li>
+                    <li className="text-black  text-[16px] font-semibold leading-normal uppercase  cursor-pointer hover:text-primary ">
+                      {nav.menu}
+                    </li>
                   </Link>
                 ))}
               </ul>

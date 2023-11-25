@@ -7,7 +7,7 @@ const Services = () => {
     ]
     return (
         <>
-            <section className="py-[30px] lg:py-[70px] bg-[#f4fbfe]">
+            <section className="py-[100px] lg:py-[200px] bg-[#f4fbfe]">
                 <div className="container mx-auto">
                     <div className="">
                         <h3 className="text-black font-['Red_Hat_Display'] text-[24px] md:text-[35px] leading:[30px] md:leading-[45px] font-bold leading-[45px] text-center px-4"

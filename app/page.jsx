@@ -11,6 +11,7 @@ import AOS from 'aos';
 import Services from "@/component/services/service";
 import Herosection2 from "@/component/home/home2";
 import StickToVision from "@/component/home/stick-to-our-vision";
+import Ourcapabilities from "@/component/home/our-capabilities";
 
 
 export default function Home() {
@@ -77,6 +78,7 @@ export default function Home() {
       <Herosection2 />
       <StickToVision/>
       <Reviews />
+      <Ourcapabilities/>
       <FollowUs/>
       {/* <Services/> */}
       <Footer/>

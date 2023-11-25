@@ -10,14 +10,15 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-        oswald: "Oswald, sans-serif",
-        urbanist: "Urbanist, sans-serif",
-        redHatDisplay : 'Red Hat Display'
+      oswald: "Oswald, sans-serif",
+      urbanist: "Urbanist, sans-serif",
+      redHatDisplay: 'Red Hat Display'
     },
     colors: {
       ...colors,
-      primary: "#49b5e7;",
-      secondary:"#000"
+      primary: "#133239;",
+      secondary: "#000",
+      main: "#fff"
     },
     container: {
       padding: {
@@ -29,6 +30,6 @@ module.exports = {
       },
     },
     extend: {},
-},
+  },
   plugins: [],
 }
