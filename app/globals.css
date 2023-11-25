@@ -4,52 +4,150 @@
 
 
 
-.hero-section{
-  background: url("/images/hero.png");
-  /* height: 100vh; */
+@layer components {
+  .btn-primary {
+    @apply  bg-[#133239] text-white text-[16px] uppercase font-medium inline-flex justify-center items-center py-[12px] px-[40px] rounded-[10px] hover:bg-primary;
+  }
+}
+@layer components {
+  .default-padding{
+    @apply  py-[50px] lg:py-[70px] 2xl:py-[100px];
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+button{
+  transition: .3s;
+}
+
+button:hover {
+  webkit-transition: all 350ms ease-in-out 0s;
+  -moz-transition: all 350ms ease-in-out 0s;
+  -ms-transition: all 350ms ease-in-out 0s;
+  -o-transition: all 350ms ease-in-out 0s;
+  transition: all 350ms ease-in-out 0s;
+  opacity: 1;
+}
+
+button:focus{
+  outline: none;
+}
+
+
+/*--------------- header ---------*/
+#header {
+  background: #fff;
+  transition: all 0.5s;
+  z-index: 997;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.05);
+}
+
+/*---------------- hero section---------------- */
+.hero-section {
+  background: #f9f9f9;
+  height: 100vh;
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  position: relative;
 }
-h1{
+/*---------------- service section---------------- */
+
+.service-card{
+  box-shadow: 0 10px 29px 0 rgba(68, 88, 144, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.service-card:hover h6{
+  color: #49b5e7;
+}
+.service-card:hover .service-card{
+  /* transform: translateY(-5px); */
+}
+
+
+h1 {
   font-size: 70px;
 }
 
+.img-inner {
+  opacity: 0;
+  transition: ease-in-out;
+  transition-duration: 500ms;
+  /* transition-delay: 1s; */
+}
 
-@media only screen and (max-width: 1600px){
-  h1{
+.img-box:hover .img-inner {
+  opacity: 0.8;
+}
+
+.menu-list {
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom 0.3s ease;
+}
+
+.menu-list:hover {
+  text-decoration: none;
+  border-bottom: 1px solid white;
+}
+
+
+/* ------------   icons hover ----------- */
+
+.support_box .support-icon {
+  transition: transform 1400ms;
+  will-change: transform;
+}
+
+.support_box:hover .support-icon,
+.support_box:focus .support-icon {
+  transform: rotate(360deg);
+  ;
+}
+
+/* ------------   icons hover ----------- */
+
+
+
+@media only screen and (max-width: 1600px) {
+  h1 {
     font-size: 50px;
-    
+
   }
 }
-@media only screen and (min-width: 1536px){
+
+@media only screen and (min-width: 1536px) {
   .container {
     max-width: 1480px;
   }
 }
-  
-@media only screen and (max-width: 1400px){
-  .hero-section{
-    height: 100vh;
-  }
-}
-  
-@media only screen and (max-width: 1024px){
-  .hero-section{
-    height: auto;
-  }
-}
-  
 
-@media only screen and (max-width: 767px){
-  
-  .hero-section{
-    background: url("/images/m_bg.png");
+@media only screen and (max-width: 1400px) {}
+
+@media only screen and (max-width: 1024px) {
+  .hero-section {
     height: auto;
-    background-size: contain;
   }
-  h1{
+
+  .hero-section::after {
+    height: auto;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+}
+
+
+@media only screen and (max-width: 767px) {
+
+  h1 {
     font-size: 30px;
     text-align: center;
   }

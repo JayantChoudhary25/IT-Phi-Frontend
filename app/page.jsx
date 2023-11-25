@@ -1,25 +1,34 @@
 "use client";
+import React, {useEffect } from "react";
+
 import FollowUs from "@/component/followUs";
-import Herosection from "@/component/hero";
-import NewProduct from "@/component/new-product/newProduct";
-import NewProduct2 from "@/component/new-product/newProduct2";
+import Footer from "@/component/footer";
+import Herosection from "@/component/home/hero";
 import Reviews from "@/component/reviews";
 import Section2 from "@/component/section2";
 
-import React, { useState } from "react";
+import AOS from 'aos';
+import Services from "@/component/services/service";
+import Herosection2 from "@/component/home/home2";
+import StickToVision from "@/component/home/stick-to-our-vision";
+
 
 export default function Home() {
-  const [isShow, setShow] = useState(false);
 
-  const handleShow = ({ value }) => {
-    setShow(value);
-  };
+
+  useEffect(() => {
+    AOS.init({
+      once: false
+    });
+  }, []);
+
 
   const newProductItems = [
     {
       id: 1,
       url: "/images/watch1.png",
       color: "brown",
+      isCart : true
     },
     {
       id: 2,
@@ -63,13 +72,14 @@ export default function Home() {
 
   return (
     <>
-      <Herosection handleShow={handleShow} isShow={isShow} />
+      <Herosection />
       <Section2 />
-      <NewProduct cardItems={newProductItems}  title="new products"/>
-      <NewProduct2 />
-      <NewProduct cardItems={bestSellersItems} title="best Sellers" />
+      <Herosection2 />
+      <StickToVision/>
       <Reviews />
       <FollowUs/>
+      {/* <Services/> */}
+      <Footer/>
     </>
   );
 }
