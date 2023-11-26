@@ -8,6 +8,7 @@ import Header from "@/component/navbar/header";
 const inter = Inter({ subsets: ["latin"] });
 
 import  {metadata}  from './metadata';
+import Footer from "@/component/footer";
 
 
 export default function RootLayout({ children }) {
@@ -30,6 +31,7 @@ export default function RootLayout({ children }) {
       <Header />
         {children}
       </body>
+      <Footer/>
     </html>
   );
 }

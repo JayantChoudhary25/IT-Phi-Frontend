@@ -1,4 +1,4 @@
-"use client";
+// use client
 import React, {useEffect } from "react";
 
 import FollowUs from "@/component/followUs";
@@ -81,7 +81,7 @@ export default function Home() {
       <Ourcapabilities/>
       <FollowUs/>
       {/* <Services/> */}
-      <Footer/>
+      
     </>
   );
 }

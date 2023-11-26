@@ -37,23 +37,20 @@ const Ourcapabilities = () => {
     ]
     return (
         <>
-            <section className="py-[100px] lg:py-[200px] bg-[#f4fbfe]">
+            <section className="py-[100px] lg:py-[200px] bg-primary text-main">
                 <div className="container mx-auto">
                     <div className="text-center">
-                        <h3 className="text-black font-['Red_Hat_Display'] text-[24px] md:text-[35px] leading:[30px] md:leading-[45px] font-bold leading-[45px] text-center px-4 capitalize"
-                            data-aos="fade-down"
-                            data-aos-easing="ease-in-out"
-                            data-aos-duration="1000"
+                        <h3 className="text-main font-['Red_Hat_Display'] text-[24px] md:text-[35px] leading:[30px] md:leading-[45px] font-bold leading-[45px] text-center px-4 capitalize"
                         >
                             Our capabilities
                         </h3>
-                        <p className="my-4 text-[18px] font-normsl leading-[26px]">We love what we do. Our primary objective is to achieve the ultimate user satisfaction.<br /> We believe in transparent work with a professional approach.</p>
                         <div className="bg-[#54A3F2] w-[142px] mx-auto h-[3px] mt-[15px]"></div>
+                        <p className="my-4 text-[18px] font-normsl leading-[26px]">We love what we do. Our primary objective is to achieve the ultimate user satisfaction.<br /> We believe in transparent work with a professional approach.</p>
                         <div className=" lg:pt-[50px] pt-[30px] grid grid-cols-3 gap-x-5  gap-y-5 md:px-0 px-4 justify-center ">
                             {cardItems.map((items) => (
                                 <div
                                     className={`rounded-[10px] flex flex-col gap-3 px-[40px]  py-[30px] 
-                  bg-white service-card text-left
+                  bg-white service-card text-left text-black
                   `}
                                     key={items.id}
 
