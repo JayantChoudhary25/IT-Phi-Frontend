@@ -1,12 +1,12 @@
-'use Client'
+"use client";
 
+import { useEffect, useState } from "react";
+import dynamic from 'next/dynamic'
 import Link from "next/link";
-import { useState } from "react";
 
 const Header = () => {
 
   const [isShow, setShow] = useState(false);
-
   const handleShow = ({ value }) => {
     setShow(value);
   };
@@ -40,9 +40,10 @@ const Header = () => {
     ,
   ];
 
+
   return (
     <>
-      <main className="h-auto flex flex-col justify-center items-center bg-main fixed top-0 left-0 right-0 0px 2px 15px" id="header">
+      <main className="h-auto flex flex-col justify-center items-center bg-main fixed top-0 left-0 right-0" id="header">
         <div className=" w-full">
           <div className="container mx-auto">
             <div className="lg:flex justify-between items-center hidden py-[15px]">
@@ -116,4 +117,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default dynamic(() => Promise.resolve(Header), { ssr: false });

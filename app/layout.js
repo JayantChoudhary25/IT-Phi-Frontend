@@ -1,6 +1,4 @@
 
-"use client";
-
 import { Inter } from "next/font/google";
 import "./globals.css";
 import 'aos/dist/aos.css';
@@ -27,7 +25,7 @@ export default function RootLayout({ children }) {
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
 
       </head>
-      <body className={inter.className}>
+      <body className={inter.className} suppressHydrationWarning={true}>
       <Header />
         {children}
       </body>

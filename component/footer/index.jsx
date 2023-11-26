@@ -1,12 +1,31 @@
-import Link from "next/link";
+"use client";
+
 import React from "react";
+import dynamic from 'next/dynamic'
+import Link from "next/link";
 
 const Footer = () => {
   const menusList1 = [
-    "what we do",
-    "join our project",
-    "our work",
-    "join Us",
+    {
+      id: 0,
+      menu: "join Us",
+      path: "/careers"
+    },
+    {
+      id: 1,
+      menu: "about us",
+      path: "/about us"
+    },
+    {
+      id: 2,
+      menu: "what we do",
+      path: "/services"
+    },
+    {
+      id: 3,
+      menu: "privacy policy",
+      path: "/privacy-policy"
+    },
   ];
 
   const menuList3 = [
@@ -20,14 +39,14 @@ const Footer = () => {
     <>
       <section className="bg-primary  text-main">
         <div className="container mx-auto">
-          <div className="flex flex-wrap lg:flex-nowrap gap-y-10 lg:gap-x-5 xl:gap-x-10 2xl:gap-x-20 py-[30px] lg:py-[80px] justify-between  ">
-            <div className=" flex flex-col gap-3 w-full sm:w-[40%] md:w-[25%]">
+          <div className="flex flex-wrap lg:flex-nowrap gap-y-10 lg:gap-x-5 xl:gap-x-10 2xl:gap-x-10 py-[30px] lg:py-[80px] justify-between  items-start">
+            <div className=" flex flex-col gap-3 w-full sm:w-[40%] md:w-[35%]">
               <div className="">
                 <Link href="/">
                   <img src="/svg/logo/logo-white.svg" alt="Logo." className="max-w-[150px]" />
                 </Link>
               </div>
-              <p className="ext-[15px] xl:text-[16px] font-normal leading-[24px">
+              <p className="ext-[15px] xl:text-[16px] font-normal leading-[24px]">
                 IT Phi Pvt. Ltd, just not a team of passionate and skilled experts, rather it’s a hub of new possibilities, innovations, development and business affluence; to accompany you for your significant success.
               </p>
             </div>
@@ -35,19 +54,21 @@ const Footer = () => {
               <h6 className="text-[20px] font-bold  leading-[26px]">
                 Quick links
               </h6>
-              <ul className="inline-flex flex-col gap-4 pt-[20px]">
+              <ul className="inline-flex flex-col gap-3 pt-[20px]">
                 {menusList1.map((list, inx) => (
-                  <li
-                    key={inx}
-                    className="text-[15px] xl:text-[16px] font-normal leading-[24px] capitalize cursor-pointer"
-                  >
-                    {list}
-                  </li>
+                  <Link href={list.path}>
+                    <li
+                      key={inx}
+                      className="text-[15px]  font-normal leading-[24px] capitalize cursor-pointer"
+                    >
+                      {list.menu}
+                    </li>
+                  </Link>
                 ))}
               </ul>
             </div>
 
-            <div className="">
+            {/* <div className="">
               <h6 className="text-[20px] font-bold  leading-[26px] ">
                 Information
               </h6>
@@ -61,7 +82,7 @@ const Footer = () => {
                   </li>
                 ))}
               </ul>
-            </div>
+            </div> */}
 
 
             <div className=" flex flex-col gap-5 lg:gap-8">
@@ -105,4 +126,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default dynamic(() => Promise.resolve(Footer), { ssr: false });

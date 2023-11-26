@@ -1,5 +1,7 @@
-// use client
+"use client";
+
 import React, {useEffect } from "react";
+import dynamic from 'next/dynamic'
 
 import FollowUs from "@/component/followUs";
 import Footer from "@/component/footer";
@@ -14,7 +16,7 @@ import StickToVision from "@/component/home/stick-to-our-vision";
 import Ourcapabilities from "@/component/home/our-capabilities";
 
 
-export default function Home() {
+const  Home = () => {
 
 
   useEffect(() => {
@@ -85,3 +87,5 @@ export default function Home() {
     </>
   );
 }
+
+export default dynamic(() => Promise.resolve(Home), { ssr: false });

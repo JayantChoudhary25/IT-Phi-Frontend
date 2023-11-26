@@ -21,7 +21,7 @@ const Herosection = () => {
             <p className="font-medium text-[16px] lg:text-[18px] leading-[32px] ">Accusantium quam, aliquam ultricies eget tempor id, aliquam eget nibh et. Maecen aliquam, risus at semper. Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum</p>
             <div className="mx-auto md:mx-0">
 
-              <button className="btn-secondary"> Get Started </button>
+              <button className="btn-secondary hover:border-white"> Get Started </button>
 
             </div>
           </div>

@@ -89,15 +89,18 @@ h1 {
 
 .menu-list {
   text-decoration: none;
-  border-bottom: 1px solid transparent;
+  border-bottom: 2px solid transparent;
   transition: border-bottom 0.3s ease;
 }
 
 .menu-list:hover {
   text-decoration: none;
-  border-bottom: 1px solid white;
+  border-bottom: 2px solid #1b3138;
 }
 
+.active{
+  border-bottom: 2px solid #1b3138;
+}
 
 /* ------------   icons hover ----------- */
 
