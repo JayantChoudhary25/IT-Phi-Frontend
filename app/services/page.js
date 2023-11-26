@@ -1,4 +1,4 @@
-import Services from '@/component/services/service'
+import Services from '@/component/user-module/services/service'
 import React from 'react'
 
 const Index = () => {

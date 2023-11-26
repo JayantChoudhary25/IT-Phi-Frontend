@@ -13,8 +13,11 @@
   .default-padding{
     @apply  py-[50px] lg:py-[70px] 2xl:py-[100px];
   }
+  .user-input{
+    @apply  w-full rounded-lg border bg-white py-4 pl-6 pr-10 outline-none focus:border-primary focus-visible:shadow-none dark:focus:border-primary text-black;
+  }
   .custom-input{
-    @apply  rounded-[4px] px-[10px] py-[10px] w-full focus-visible:outline-none hover:border-primary border w-full;
+    @apply  w-full rounded-lg border bg-transparent py-4 pl-6 pr-10 outline-none focus:border-primary focus-visible:shadow-none dark:focus:border-primary;
   }
 }
 

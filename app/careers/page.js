@@ -69,12 +69,12 @@ const CareersPage = () => {
         <div className=" pb-[70px] text-black">
 
           <div className="container mx-auto">
-            <div className="bg-primary text-main py-[40px] rounded">
+            <div className="bg-primary text-main py-[50px] rounded">
               <form onSubmit={handleSubmit} >
                 <div className="md:grid md:grid-cols-2 flex flex-col first-letter justify-center md:gap-x-10  xl:gap-x-20 gap-y-5 lg:gap-y-10 items-center pt-[50px] w-full md:w-[80%] mx-auto px-[20px] md:px-1">
                   <div className="col-span-2 w-full pb-[20px]">
                     <h4
-                      className="text-[22px] md:text-[26px] font-bold leading:[32px] uppercase"
+                      className="text-[22px] md:text-[30px] font-semibold leading:[42px] uppercase"
                     >
                       Application Form
                     </h4>
@@ -83,23 +83,23 @@ const CareersPage = () => {
                     </p>
                   </div>
                   <div className="w-full">
-                    <input type="text" name="fName" placeholder='First name' value={applicatinDetails.fName} onChange={inputHandler} className='custom-input text-black capitalize' required maxLength={64} />
+                    <input type="text" name="fName" placeholder='First name' value={applicatinDetails.fName} onChange={inputHandler} className='user-input capitalize' required maxLength={64} />
                   </div>
                   <div className="w-full">
-                    <input type="text" name="city" placeholder='City' value={applicatinDetails.city} onChange={inputHandler} className='custom-input text-black capitalize' required maxLength={64} />
+                    <input type="text" name="city" placeholder='City' value={applicatinDetails.city} onChange={inputHandler} className='user-input capitalize' required maxLength={64} />
                   </div>
                   <div className="w-full">
-                    <input type="email" name="email" placeholder='Email' value={applicatinDetails.email} onChange={inputHandler} className='custom-input text-black' required />
+                    <input type="email" name="email" placeholder='Email' value={applicatinDetails.email} onChange={inputHandler} className='user-input' required />
                   </div>
                   <div className="w-full">
-                    <input type='text' name="number" placeholder='Number' value={applicatinDetails.number} onChange={inputHandler} className='custom-input text-black' required pattern="[6789][0-9]{9}"
+                    <input type='text' name="number" placeholder='Number' value={applicatinDetails.number} onChange={inputHandler} className='user-input' required pattern="[6789][0-9]{9}"
                       title="Please enter a valid 10-digit mobile number starting with 6, 7, 8, or 9" />
                   </div>
                   <div className="w-full">
-                    <input type='text' name="linkedin" placeholder='Linkedin user or url' value={applicatinDetails.linkedin} onChange={inputHandler} className='custom-input text-black' required />
+                    <input type='text' name="linkedin" placeholder='Linkedin user or url' value={applicatinDetails.linkedin} onChange={inputHandler} className='user-input' required />
                   </div>
                   <div className="w-full">
-                    <select className='custom-input capitalize text-black' name="jobs" value={applicatinDetails.jobs} onChange={inputHandler} >
+                    <select className='user-input capitalize' name="jobs" value={applicatinDetails.jobs} onChange={inputHandler} >
                       <option className='text-gray'> select jobs </option>
                       {jobsOptons.map((jobs)=>(
                       <option value={jobs}> {jobs}</option>

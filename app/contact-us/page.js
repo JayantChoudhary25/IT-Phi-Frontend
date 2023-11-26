@@ -45,8 +45,8 @@ const ContactPage = () => {
 
   return (
     <>
-      <div className="bg-#f0fbff] py-[30px">
-        <div className="pt-[80px] lg:pt-[130px] pb-[7  0px] bg-[#f0fbff]">
+      <div className="bg-#f0fbff] py-[30px]" id='contact'>
+        <div className="pt-[80px] lg:pt-[130px] pb-[70px] bg-[#f0fbff]">
           <div className=" text-black py-[30px] px-20px md:px-1">
             <div className="">
               <h3
@@ -70,7 +70,7 @@ const ContactPage = () => {
             </div>
           </div>
           <div className="container mx-auto">
-            <div className="bg-[#fff] py-[20px] lg:py-[30px]">
+            <div className="bg-[#fff] py-[20px] lg:py-[30px] ">
               <form onSubmit={handleSubmit} >
                 <div className="md:grid md:grid-cols-2 flex flex-col first-letter justify-center md:gap-x-10  xl:gap-x-20 gap-y-5 lg:gap-y-10 items-center pt-[50px] w-full md:w-[80%] mx-auto px-[20px] md:px-1">
                   <div className="w-full">

@@ -1,20 +1,22 @@
-
+"use client"
 import { Inter } from "next/font/google";
+const inter = Inter({ subsets: ["latin"] });
+import { usePathname } from 'next/navigation'
+import { metadata } from './metadata';
+import Header from "@/component/user-module/home/navbar/header";
+import Footer from "@/component/user-module/home/footer";
+
 import "./globals.css";
 import 'aos/dist/aos.css';
-import Header from "@/component/navbar/header";
-const inter = Inter({ subsets: ["latin"] });
-
-import  {metadata}  from './metadata';
-import Footer from "@/component/footer";
 
 
 export default function RootLayout({ children }) {
 
+  const pathname = usePathname()
   return (
     <html lang="en">
       <head>
-      <link rel="icon" href="/svg/logo.svg" sizes="any" />
+        <link rel="icon" href="/svg/logo.svg" sizes="any" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
         <link
@@ -22,14 +24,20 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         />
 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
       </head>
       <body className={inter.className} suppressHydrationWarning={true}>
-      <Header />
+        {
+         (pathname === "/admin/sign-in"|| pathname === "/admin/dashboard") ? null : <Header />
+        }
+
         {children}
+
+        {
+         (pathname === "/admin/sign-in"|| pathname === "/admin/dashboard") ? null : <Footer />
+        }
       </body>
-      <Footer/>
     </html>
   );
 }

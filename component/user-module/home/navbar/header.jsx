@@ -65,7 +65,7 @@ const Header = () => {
                   ))}
                 </ul>
                 <div className="">
-                  <Link href="/contact-us">
+                  <Link href="#contact">
                     <button className="btn-primary">contact us</button>
                   </Link>
                 </div>

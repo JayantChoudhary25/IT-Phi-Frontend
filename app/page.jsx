@@ -3,17 +3,18 @@
 import React, {useEffect } from "react";
 import dynamic from 'next/dynamic'
 
-import FollowUs from "@/component/followUs";
-import Footer from "@/component/footer";
-import Herosection from "@/component/home/hero";
-import Reviews from "@/component/reviews";
-import Section2 from "@/component/section2";
+import FollowUs from "@/component/user-module/followUs";
+import Footer from "@/component/user-module/home/footer";
+import Herosection from "@/component/user-module/home/hero";
+import Reviews from "@/component/user-module/reviews";
+import Section2 from "@/component/user-module/services/section2";
 
 import AOS from 'aos';
-import Services from "@/component/services/service";
-import Herosection2 from "@/component/home/home2";
-import StickToVision from "@/component/home/stick-to-our-vision";
-import Ourcapabilities from "@/component/home/our-capabilities";
+import Services from "@/component/user-module/services/service";
+import Herosection2 from "@/component/user-module/home/home2";
+import StickToVision from "@/component/user-module/home/stick-to-our-vision";
+import Ourcapabilities from "@/component/user-module/home/our-capabilities";
+import ContactPage from "@/app/contact-us/page";
 
 
 const  Home = () => {
@@ -81,6 +82,7 @@ const  Home = () => {
       <StickToVision/>
       <Reviews />
       <Ourcapabilities/>
+      <ContactPage />
       <FollowUs/>
       {/* <Services/> */}
       
