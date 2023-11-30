@@ -7,7 +7,7 @@ const Services = () => {
     ]
     return (
         <>
-            <section className="py-[100px] lg:py-[170px]">
+            <section className="py-[170px]">
                 {/*----------- section 1----------- */}
                 <div className="text-black pb-[30px]">
                     <h3
@@ -24,7 +24,7 @@ const Services = () => {
                 <div className=" bg-[#f4fbfe] py-[70px]">
                     <div className="container mx-auto">
                         <div className="">
-                            <div className=" lg:pt-[50px] pt-[30px] grid grid-cols-3 gap-x-5  gap-y-5 md:px-0 px-4 justify-center ">
+                            <div className=" lg:pt-[50px] pt-[30px] grid md:grid-cols-3 gap-x-5  gap-y-5 md:px-0 px-4 justify-center ">
                                 {cardItems.map((items) => (
                                     <div
                                         className={`rounded-[10px] flex flex-col gap-3 px-[30px]  py-[30px] 

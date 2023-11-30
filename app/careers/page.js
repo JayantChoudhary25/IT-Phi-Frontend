@@ -47,7 +47,7 @@ const CareersPage = () => {
 
   return (
     <>
-      <section className="bg-#f0fbff] py-[100px] lg:py-[170px]">
+      <section className="bg-#f0fbff] py-[170px]">
         <div className="container mx-auto">
           <h3
             className="text-[24px] md:text-[35px] font-bold leading:[30px] md:leading-[45px] text-center px-4 uppercase"
