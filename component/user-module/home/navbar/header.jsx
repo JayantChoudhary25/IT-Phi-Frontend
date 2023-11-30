@@ -1,11 +1,14 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useRouter } from 'next/navigation';
+
 import dynamic from 'next/dynamic'
 import Link from "next/link";
 
 const Header = () => {
 
+  const router = useRouter();
   const [isShow, setShow] = useState(false);
   const handleShow = ({ value }) => {
     setShow(value);
@@ -40,6 +43,10 @@ const Header = () => {
     ,
   ];
 
+  const handleClick = (path) => {
+     router.push(path);
+    setShow(false);
+  }
 
   return (
     <>
@@ -100,11 +107,12 @@ const Header = () => {
               </div>
               <ul className="flex flex-col gap-x-10 gap-y-8  px-[40px] py-8">
                 {navItems.map((nav) => (
-                  <Link href={nav.path}>
-                    <li className="text-black  text-[16px] font-semibold leading-normal uppercase  cursor-pointer hover:text-primary ">
+                  // <Link href={nav.path}>
+                    <li className="text-black  text-[16px] font-semibold leading-normal uppercase  cursor-pointer hover:text-primary "
+                    onClick={() => handleClick(nav.path)}>
                       {nav.menu}
                     </li>
-                  </Link>
+                  // </Link>
                 ))}
               </ul>
             </div>

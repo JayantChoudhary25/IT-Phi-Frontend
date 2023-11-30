@@ -1,6 +1,6 @@
 "use client";
 
-import React, {useEffect } from "react";
+import React, { useEffect } from "react";
 import dynamic from 'next/dynamic'
 
 import FollowUs from "@/component/user-module/followUs";
@@ -17,13 +17,13 @@ import Ourcapabilities from "@/component/user-module/home/our-capabilities";
 import ContactPage from "@/app/contact-us/page";
 
 
-const  Home = () => {
+const Home = () => {
 
 
   useEffect(() => {
-    AOS.init({
-      once: false
-    });
+        AOS.init({
+          once: false
+        });
   }, []);
 
 
@@ -32,7 +32,7 @@ const  Home = () => {
       id: 1,
       url: "/images/watch1.png",
       color: "brown",
-      isCart : true
+      isCart: true
     },
     {
       id: 2,
@@ -79,13 +79,13 @@ const  Home = () => {
       <Herosection />
       <Section2 />
       <Herosection2 />
-      <StickToVision/>
+      <StickToVision />
       <Reviews />
-      <Ourcapabilities/>
+      <Ourcapabilities />
       <ContactPage />
-      <FollowUs/>
+      <FollowUs />
       {/* <Services/> */}
-      
+
     </>
   );
 }

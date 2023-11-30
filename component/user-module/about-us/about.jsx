@@ -12,7 +12,7 @@ const AboutPage = () => {
 
   return (
     <>
-      <div className='pt-[100px] lg:pt-[170px]'>
+      <div className='pt-[170px]'>
 
         {/*----------- section 1----------- */}
         <div className="text-black pb-[30px]">
