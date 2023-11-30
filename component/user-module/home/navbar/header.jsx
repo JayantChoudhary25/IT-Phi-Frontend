@@ -79,7 +79,7 @@ const Header = () => {
           <div className="lg:hidden flex justify-between items-center w-full px-4 py-4 z-[999] ">
             <div className="w-[100px] ">
               <Link href="/">
-                <img src="/svg/logo-white.svg" alt="Logo." className="max-w-[150px]" />
+                <img src="/svg/logo/logo-black.svg" alt="Logo." className="max-w-[150px]" />
               </Link>
               {/* <h1 className="text-primary text-[30px] font-bold whitespace-nowrap">IT Phi Pvt. Ltd</h1> */}
             </div>

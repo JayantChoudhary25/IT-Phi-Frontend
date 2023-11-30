@@ -46,7 +46,7 @@ const Ourcapabilities = () => {
                         </h3>
                         <div className="bg-[#54A3F2] w-[142px] mx-auto h-[3px] mt-[15px]"></div>
                         <p className="my-4 text-[18px] font-normsl leading-[26px]">We love what we do. Our primary objective is to achieve the ultimate user satisfaction.<br /> We believe in transparent work with a professional approach.</p>
-                        <div className=" lg:pt-[50px] pt-[30px] grid grid-cols-3 gap-x-5  gap-y-5 md:px-0 px-4 justify-center ">
+                        <div className=" lg:pt-[50px] pt-[30px] grid md:grid-cols-3 gap-x-5  gap-y-5 md:px-0 px-4 justify-center ">
                             {cardItems.map((items) => (
                                 <div
                                     className={`rounded-[10px] flex flex-col gap-3 px-[40px]  py-[30px] 
