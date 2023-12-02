@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/svg/logo.svg" sizes="any" />
+        <link rel="icon" href="/svg/logo/white-bg-logo.svg" sizes="any" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
         <link
@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
         />
 
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-
+        <title>{metadata.title}</title>
       </head>
       <body className={inter.className} suppressHydrationWarning={true}>
         {
