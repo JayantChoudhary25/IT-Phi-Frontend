@@ -3,6 +3,7 @@
 import React from "react";
 import dynamic from 'next/dynamic'
 import Link from "next/link";
+import Image from "next/image";
 
 const Footer = () => {
   const menusList1 = [
@@ -43,7 +44,9 @@ const Footer = () => {
             <div className=" flex flex-col gap-3 w-full sm:w-[40%] md:w-[35%]">
               <div className="">
                 <Link href="/">
-                  <img src="/svg/logo/logo-white.svg" alt="Logo." className="max-w-[150px]" />
+                  <Image src="/svg/logo/logo-white.svg" alt="Logo."
+                    width={150}
+                    height={70} />
                 </Link>
               </div>
               <p className="ext-[15px] xl:text-[16px] font-normal leading-[24px]">
@@ -95,20 +98,26 @@ const Footer = () => {
                   placeholder="Email"
                   className="border-none bg-[#133239] focus-visible:outline-none   placeholder:text-white text-[16px] font-normal  leading-[15px] "
                 />
-                <img src="/svg/arrow.svg" alt="" className="cursor-pointer" />
+                <Image src="/svg/arrow.svg" alt="icon." className="cursor-pointer" 
+                 width={25}
+                 height={25}/>
               </div>
               <div className="flex gap-x-8 lg:gap-5 2xl:gap-8 items-center">
                 <Link href="https://www.twitter.com/">
-                  <img src="/svg/social/icon1.svg" alt="" />
+                  <Image  src="/svg/social/icon1.svg" alt="icon."  width={25}
+                    height={25} className=" " />
                 </Link>
                 <Link href="https://www.facebook.com/">
-                  <img src="/svg/social/icon2.svg" alt="" />
+                  <Image  src="/svg/social/icon2.svg" alt="icon."  width={25}
+                    height={25} className=" " />
                 </Link>
                 <Link href="https://www.youtube.com/">
-                  <img src="/svg/social/icon3.svg" alt="" />
+                  <Image  src="/svg/social/icon3.svg" alt="icon."  width={25}
+                    height={25} className=" " />
                 </Link>
                 <Link href="https://www.instagram.com/">
-                  <img src="/svg/social/icon4.svg" alt="" />
+                  <Image  src="/svg/social/icon4.svg" alt="icon."  width={25}
+                    height={25} className=" " />
                 </Link>
               </div>
             </div>

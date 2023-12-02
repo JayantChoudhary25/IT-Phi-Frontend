@@ -4,6 +4,7 @@ import { useRouter } from 'next/navigation'
 import { usePathname } from 'next/navigation'
 import Enquiry from "../dashboard-component/enquiry";
 import ApplyJobs from "../dashboard-component/apply-jobs";
+import Image from "next/image";
 
 
 const menuList = [
@@ -55,7 +56,7 @@ const SideBar = forwardRef(({ showNav }, ref) => {
             <div className="flex ">
                 <div ref={ref} className="h-screen w-[270px] bg-[#1e2433] py-[20px] text-main">
                     <div className="">
-                        <img
+                        <Image
                             src="/svg/logo/logo-white.svg"
                             width={150}
                             height={100}

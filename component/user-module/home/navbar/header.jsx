@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 
 import dynamic from 'next/dynamic'
 import Link from "next/link";
+import Image from "next/image";
 
 const Header = () => {
 
@@ -56,7 +57,9 @@ const Header = () => {
             <div className="lg:flex justify-between items-center hidden py-[15px]">
               <div className="md:w-[120px] xl:w-auto z-[999]">
                 <Link href="/">
-                  <img src="/svg/logo/logo-black.svg" alt="Logo." className="max-w-[150px]" />
+                  <Image src="/svg/logo/logo-black.svg" alt="Logo." className="" 
+                   width={150}
+                   height={70} />
                 </Link>
               </div>
               <div className="flex lg:gap-x-10  xl:gap-x-20  items-center">
@@ -86,7 +89,9 @@ const Header = () => {
           <div className="lg:hidden flex justify-between items-center w-full px-4 py-4 z-[999] ">
             <div className="w-[100px] ">
               <Link href="/">
-                <img src="/svg/logo/logo-black.svg" alt="Logo." className="max-w-[150px]" />
+                <Image src="/svg/logo/logo-black.svg" alt="Logo."
+                 width={150}
+                   height={70}  />
               </Link>
               {/* <h1 className="text-primary text-[30px] font-bold whitespace-nowrap">IT Phi Pvt. Ltd</h1> */}
             </div>
@@ -94,7 +99,8 @@ const Header = () => {
               className=" h-[35px] w-[35px] cursor-pointer z-[999]"
               onClick={() => handleShow({ value: true })}
             >
-              <img src="/svg/menu.svg" alt="menu" />
+              <Image src="/svg/menu.svg" alt="menu"  width={50}
+                   height={50}/>
             </div>
           </div>
           {isShow && (
@@ -103,7 +109,8 @@ const Header = () => {
                 className=" h-[35px] w-[35px]  cursor-pointer pt-4 mr-5 ml-auto z-[999]"
                 onClick={() => handleShow({ value: false })}
               >
-                <img src="/svg/close.svg" alt="close" />
+                <Image src="/svg/close.svg" alt="close"  width={50}
+                   height={50}/>
               </div>
               <ul className="flex flex-col gap-x-10 gap-y-8  px-[40px] py-8">
                 {navItems.map((nav) => (

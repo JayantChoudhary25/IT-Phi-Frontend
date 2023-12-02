@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const FollowUs = () => {
@@ -43,16 +44,20 @@ const FollowUs = () => {
                 <div
                   className="relative img-box"
                 >
-                  <img
+                  <Image
                     src={items.url}
+                    width={250}
+                    height={400}
                     alt="Loading.."
-                    className="mx-auto w-[250px]  md:w-[350px] lg:w-auto"
+                    className="mx-auto"
                   />
                   <div className="bg-black absolute top-0 left-0 h-full w-full flex justify-center items-center rounded img-inner">
-                    <img
+                    <Image
                       src="/svg/social/instagram.svg"
                       alt="loading."
                       className=""
+                      width={50}
+                      height={50}
                     />
                   </div>
                 </div>

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const Section2 = () => {
@@ -31,7 +32,8 @@ const Section2 = () => {
               <>
                 <div className="flex  items-center justify-center md:gap-x-3 gap-x-5 lg:gap-x-5 support_box" key={inx}>
                   <div className="md:w-[50px] w-auto lg:w-auto" >
-                    <img src={items.url} alt="" className="support-icon"/>
+                    <Image src={items.url} alt="" className="support-icon"  width={70}
+                   height={70}/>
                   </div>
                   <div className="">
                     <h6 className="text-black font-['Red_Hat_Display'] text-[18px] lg:text-[20px] font-bold leading-normal">{items.label}</h6>
