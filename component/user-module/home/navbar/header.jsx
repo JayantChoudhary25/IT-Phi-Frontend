@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from 'next/navigation';
-
+import { usePathname } from 'next/navigation'
 import dynamic from 'next/dynamic'
 import Link from "next/link";
 import Image from "next/image";
@@ -10,10 +10,12 @@ import Image from "next/image";
 const Header = () => {
 
   const router = useRouter();
+  const pathname = usePathname()
   const [isShow, setShow] = useState(false);
   const handleShow = ({ value }) => {
     setShow(value);
   };
+  console.log(pathname)
 
   const navItems = [
     {
@@ -67,7 +69,7 @@ const Header = () => {
                   {navItems.map((nav) => (
                     <Link href={nav.path}>
                       <li
-                        className="text-black text-[15px] font-semibold leading-normal menu-list  uppercase hover:text-primary cursor-pointer "
+                        className={`text-black text-[15px] font-semibold leading-normal menu-list  uppercase cursor-pointer ${ pathname === nav.path ? "isActive" : ""}`}
                       >
                         {nav.menu}
                       </li>

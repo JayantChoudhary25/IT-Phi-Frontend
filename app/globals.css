@@ -98,11 +98,13 @@ h1 {
 
 .menu-list:hover {
   text-decoration: none;
-  border-bottom: 2px solid #1b3138;
+  border-bottom: 2px solid #e8770e;
+  color: #e8770e;
 }
 
-.active{
-  border-bottom: 2px solid #1b3138;
+.isActive{
+  border-bottom: 2px solid #e8770e;
+  color: #e8770e;
 }
 
 /* ------------   icons hover ----------- */
