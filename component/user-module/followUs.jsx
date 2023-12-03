@@ -5,24 +5,24 @@ const FollowUs = () => {
   const cardItems = [
     {
       id: 1,
-      url: "/images/w1.png",
+      url: "/images/about/img (1).jpg",
     },
     {
       id: 2,
-      url: "/images/w2.png",
+      url: "/images/about/img (1).png",
     },
     {
       id: 3,
-      url: "/images/w6.png",
+      url: "/images/about/img (2).jpg",
       icon: "/svg/social/instagram.svg",
     },
     {
       id: 4,
-      url: "/images/w4.png",
+      url: "/images/about/img (3).jpg",
     },
     {
       id: 5,
-      url: "/images/w5.png",
+      url: "/images/about/img (4).jpg",
     },
   ];
   return (
@@ -36,9 +36,9 @@ const FollowUs = () => {
               data-aos-easing="ease-in-out"
               data-aos-duration="1000"
             >
-              FOLLOW US ON INSTAGRAM
+              {/* FOLLOW US ON INSTAGRAM */}
             </h3>
-            <div className="bg-[#54A3F2] w-[142px] mx-auto h-[3px] mt-[15px]"></div>
+            {/* <div className="bg-[#54A3F2] w-[142px] mx-auto h-[3px] mt-[15px]"></div> */}
             <div className="md:pt-[70px] pt-[30px] flex  flex-wrap lg:flex-row lg:flex-nowrap  gap-x-3 gap-y-6  md:px-0 px-4 justify-center ">
               {cardItems.map((items) => (
                 <div
@@ -46,7 +46,7 @@ const FollowUs = () => {
                 >
                   <Image
                     src={items.url}
-                    width={250}
+                    width={300}
                     height={400}
                     alt="Loading.."
                     className="mx-auto"
@@ -56,8 +56,8 @@ const FollowUs = () => {
                       src="/svg/social/instagram.svg"
                       alt="loading."
                       className=""
-                      width={50}
-                      height={50}
+                      width={30}
+                      height={30}
                     />
                   </div>
                 </div>

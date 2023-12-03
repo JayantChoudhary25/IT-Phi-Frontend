@@ -79,8 +79,8 @@ const Home = () => {
       <Herosection />
       <Section2 />
       <Herosection2 />
-      <StickToVision />
-      <Reviews />
+      
+      {/* <Reviews /> */}
       <Ourcapabilities />
       <ContactPage />
       <FollowUs />
