@@ -61,7 +61,7 @@ const ContactPage = () => {
             </div>
             <div className="flex gap-x-20  gap-y-5 justify-center items-center flex-col md:flex-row pt-4">
               <p className="text-16px md:text-[18px] font-normal leading-[26px] text-center">
-                Call us at : +91-700000000
+                Call us at : +91-9754282428
               </p>
               <div className=" bg-[#b0c8d0] rounded w-[100px] md:w-[1px] h-[1px] md:h-[40px]"></div>
               <p className=" text-16px md:text-[18px] font-normal leading-[26px] text-center">

@@ -12,6 +12,7 @@ const CareersPage = () => {
     email: "",
     linkedin: "",
     jobs: "",
+    resume: null, // New field for resume file
   })
   const [isLoading, setLoading] = useState(false)
 
@@ -22,8 +23,14 @@ const CareersPage = () => {
       email: "",
       linkedin: "",
       jobs: "",
+      resume: null, // New field for resume file
     })
   }
+  const fileInputChangeHandler = (e) => {
+    // Handle the file input separately
+    const file = e.target.files[0];
+    setApplicatinDetails({ ...applicatinDetails, resume: file });
+  };
 
   const inputHandler = (e) => {
     setApplicatinDetails({ ...applicatinDetails, [e.target.name]: e.target.value })
@@ -43,8 +50,23 @@ const CareersPage = () => {
     }
   }
 
-  const jobsOptons = ["front end developer", "junior developer" , "designer", "tech lead", "software developer", "marketing manager"]
-
+  // const jobsOptons = ["front end developer", "junior developer" , "designer", "tech lead", "software developer", "marketing manager"]
+  const jobsOptions = [
+    "Front-end Developer",
+    "Full Stack Developer",
+    "Junior Developer",
+    "Internship",
+    "Designer",
+    "Software Developer",
+    "Marketing Manager",
+    "Product Manager",
+    "UX/UI designer",
+    "DevOps engineer",
+    "Mobile App Developer",
+    "QA engineer",
+    "Digital Marketing Specialist",
+  ];
+  
   return (
     <>
       <section className="bg-#f0fbff] py-[170px]">
@@ -79,7 +101,7 @@ const CareersPage = () => {
                       Application Form
                     </h4>
                     <p className="text-16px md:text-[18x] font-medium leading-[26px] mt-1">
-                    Thank you for your interest in joining the It Phi Pvt. ltd. Lean team!
+                    Thank you for your interest in joining the It Phi Pvt. ltd. Team!
                     </p>
                   </div>
                   <div className="w-full">
@@ -101,11 +123,25 @@ const CareersPage = () => {
                   <div className="w-full">
                     <select className='user-input capitalize' name="jobs" value={applicatinDetails.jobs} onChange={inputHandler} >
                       <option className='text-gray'> select jobs </option>
-                      {jobsOptons.map((jobs)=>(
+                      {jobsOptions.map((jobs)=>(
                       <option value={jobs}> {jobs}</option>
                       ))}
                     </select>
                   </div>
+                  <div className="w-full">
+          <label htmlFor="resume" className="text-16px md:text-[18x] font-medium leading-[26px] mb-1">
+            Upload Resume
+          </label>
+          <input
+            type="file"
+            id="resume"
+            name="resume"
+            accept=".pdf, .doc, .docx" // Specify accepted file formats
+            onChange={fileInputChangeHandler}
+            className="user-input"
+            required
+          />
+        </div>
                   <div className="col-span-2 ml-auto">
                     <button className='btn-secondary hover:bg-[#3cc1df] hover:border-white' type='submit' disabled={isLoading}> {isLoading ? "Loading ..." : "submit"}</button>
                   </div>
