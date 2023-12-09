@@ -19,6 +19,29 @@
   .custom-input{
     @apply  w-full rounded-lg border bg-transparent py-4 pl-6 pr-10 outline-none focus:border-primary focus-visible:shadow-none dark:focus:border-primary;
   }
+
+  
+/* =========== service =========== */
+
+.single_services {
+  @apply border-2 border-dashed border-border-color rounded-xl py-14 px-6 sm:py-6 sm:px-4 md:py-12 md:px-6 transition-all duration-300  hover:border-theme-color hover:shadow;
+}
+.services_icon {
+  @apply relative inline-block;
+}
+.services_icon i {
+  @apply absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-5xl text-black transition-all duration-300;
+}
+.services_shape {
+  fill: #e4f1f5;
+  @apply transition-all duration-300;
+}
+.single_services:hover .services_icon i {
+  @apply text-white;
+}
+.single_services:hover .services_shape {
+  @apply fill-current text-theme-color;
+}
 }
 
 html {
@@ -121,7 +144,6 @@ h1 {
 }
 
 /* ------------   icons hover ----------- */
-
 
 
 @media only screen and (max-width: 1600px) {

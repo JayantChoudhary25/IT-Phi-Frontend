@@ -44,10 +44,10 @@ const AboutPage = () => {
                 </h1>
 
                 <p className="font-normal text-[16px] leading-[32px] ">
-                  Experts use appropriate tool and techniques to create a result oriented and lead generating website for your business.
+                  At IT PHI Pvt. Ltd., we are passionate about harnessing the power of technology to drive innovation and empower businesses. Established with a vision to redefine the digital landscape, we strive to deliver cutting-edge solutions that transform challenges into opportunities.
                 </p>
                 <p className="font-normal text-[16px] leading-[32px] ">
-                  IT Phi Pvt. Ltd  is an offshore web designing that makes your online visibility more effective and useful. IT Phi Pvt. Ltd  services leverage domain expertise, technical expertise, and affordable web solutions worldwide. Joining hands with us will be a lucrative decision for you as entire services are provided under the aegis of excellent communication and e-business practices.
+                  IT PHI Pvt. Ltd. has evolved into a dynamic and client-centric technology firm. With a team of skilled professionals, we specialize in [Web Design, Digital Marketing, Mobile Apps ]. Our commitment to excellence and client satisfaction has been the cornerstone of our journey.
                 </p>
                 <div className="mx-auto md:mx-0">
                   <Link href="/contact-us">
@@ -61,11 +61,26 @@ const AboutPage = () => {
                 data-aos-easing="ease-out-cubic"
                 data-aos-duration="2000"
               >
-                <Image src="/images/hero/hero-img1.jpg" alt="hero-img" height={500} width={600} />
+                <Image src="/images/about/about-us.jpg" alt="hero-img" height={500} width={600} />
 
               </div>
             </div>
 
+          </div>
+        </div>
+
+        {/*----------- section 4----------- */}
+
+        <div className="py-[70px] bg-primary text-main mb-10">
+          <div className=" w-full md:w-[70%] mx-auto flex flex-col gap-5 items-center justify-center">
+            <h3
+              className="text-[24px] md:text-[34px] font-semibold leading:[30px] md:leading-[45px] text-center px-4 capitalize"
+            >
+              We Deliver Work with Perfection
+            </h3>
+            <p className=" text-[16px] font-normal leading-[26px] text-center capitalize">
+              Our Dedication and Quality of services provided to our Clients takes them towards successful Business Model and that it self tells our Success Story. We provide Best Solutions to Retain each and every customer associated with IT Phi Pvt. Ltd.
+            </p>
           </div>
         </div>
 
@@ -79,41 +94,34 @@ const AboutPage = () => {
               data-aos-easing="ease-out-cubic"
               data-aos-duration="2000"
             >
-              <Image src="/images/hero/hero-img1.jpg" alt="hero-img" height={200} width={550} />
+              <Image src="/images/about/our-goals.jpg" alt="hero-img" height={200} width={550} />
             </div>
             <div
-              className="flex flex-col gap-5  z-[99] w-full lg:w-[50%]"
+              className="flex flex-col z-[99] w-full lg:w-[50%]"
               data-aos="fade-left"
               data-aos-easing="ease-out-cubic"
               data-aos-duration="2000"
             >
-              <h1 className="font-bold text-[30px] lg:text-[42px] leading-[36px] lg:leading-[56px] uppercase">
+              <h1 className="font-bold text-[30px] lg:text-[42px] leading-[36px] lg:leading-[56px] uppercase mb-5">
                 Our Goal
               </h1>
-              <p className="font-normal text-[16px] leading-[32px] ">
-                Our Goal is to build and refine technologies that improve lives while developing great relationships along the way!
+              <p className="font-normal text-[16px] leading-[32px]">
+                <strong> Expertise : </strong> Our team comprises seasoned professionals with a deep understanding of the latest technologies.
               </p>
-              <p className="font-normal text-[16px] leading-[32px] ">
-                Our mission is to continuously upgrade our IT services and web solutions with winning ideas for our valuable customers. Our ultimate goal is to set new standard in offshore market by providing high quality services at comparatively low price across the world.
+              <p className="font-normal text-[16px] leading-[32px]">
+              <strong>Innovation : </strong>  We embrace creativity and strive to stay ahead of the curve in a rapidly evolving tech landscape.
+              </p>
+              <p className="font-normal text-[16px] leading-[32px]">
+              <strong>Integrity : </strong>  Trust is the foundation of our relationships. We operate with transparency, honesty, and a commitment to ethical business practices.
+              </p>
+              <p className="font-normal text-[16px] leading-[32px]">
+              <strong> Client-Centric Approach : </strong>  Your success is our priority. We work closely with clients to understand their unique needs and deliver tailored solutions.
               </p>
             </div>
           </div>
         </div>
-      
-        {/*----------- section 4----------- */}
 
-        <div className="py-[70px] bg-primary text-main mb-10">
-         <div className=" w-full md:w-[70%] mx-auto flex flex-col gap-5 items-center justify-center">
-         <h3
-            className="text-[24px] md:text-[34px] font-semibold leading:[30px] md:leading-[45px] text-center px-4 capitalize"
-          >
-            We Deliver Work with Perfection
-          </h3>
-          <p className=" text-[16px] font-normal leading-[26px] text-center capitalize">
-          Our Dedication and Quality of services provided to our Clients takes them towards successful Business Model and that it self tells our Success Story. We provide Best Solutions to Retain each and every customer associated with IT Phi Pvt. Ltd.
-          </p>
-         </div>
-        </div>
+
 
       </div>
     </>
