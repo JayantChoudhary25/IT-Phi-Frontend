@@ -64,14 +64,12 @@ const Services = () => {
                         SERVICES WE PROVIDE
                     </h3>
              <div data-aos="flip-up" className="max-w-xl mx-auto text-center">
-                    <h1 className="font-bold text-darken my-3 text-2xl">All-In-One <span className="text-yellow-500">Cloud Software.</span></h1>
-                    <p className="leading-relaxed text-gray-500">Skilline is one powerful online software suite that combines all the tools needed to run a successful school or office.</p>
                 </div>
                 <div className="grid md:grid-cols-3 gap-x-10 gap-y-16 ">
                     {
                         serviceData.map((items, index) => (
                             <div
-                            //  data-aos="fade-up" 
+                             data-aos="fade-up" 
                             className="bg-white shadow-xl p-6 text-center rounded-xl border border-theme-color" key={index}>
                                 {/* <div  className={`rounded-full w-16 h-16 flex items-center justify-center mx-auto shadow-lg transform -translate-y-12 bg-[#de8d4a] `}>
                                     {items.icon}
