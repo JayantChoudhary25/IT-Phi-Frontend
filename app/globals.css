@@ -42,6 +42,19 @@
 .single_services:hover .services_shape {
   @apply fill-current text-theme-color;
 }
+
+/* * ========== about ========== */ 
+/* .about_image {
+  @apply lg:absolute top-0 left-0 w-full lg:w-1/2 h-auto lg:h-full mx-auto mt-12 lg:mt-0 px-5 lg:px-0; 
+} */
+.about_image img {
+  @apply max-w-full lg:w-auto lg:max-w-screen-md;
+}
+.about_check i {
+  @apply w-7 h-7 flex items-center justify-center text-white bg-theme-color rounded-full text-base mt-1;
+}
+
+
 }
 
 html {

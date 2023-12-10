@@ -5,6 +5,7 @@ import dynamic from 'next/dynamic'
 import { BASE_URL } from '@/utils/config';
 import Image from 'next/image';
 import Link from 'next/link';
+import WhyChooseUs from '../whyChooseUs';
 
 
 const AboutPage = () => {
@@ -17,7 +18,7 @@ const AboutPage = () => {
         {/*----------- section 1----------- */}
         <div className="text-black pb-[30px]">
           <h3
-            className="text-[24px] md:text-[35px] font-bold leading:[30px] md:leading-[45px] text-center px-4 uppercase"
+            className="text-[38px]  font-bold leading:[30px] md:leading-[45px] text-center px-4 uppercase"
           >
             about us
           </h3>
@@ -39,7 +40,7 @@ const AboutPage = () => {
                 data-aos-easing="ease-out-cubic"
                 data-aos-duration="2000"
               >
-                <h1 className="font-bold text-[30px] lg:text-[42px] leading-[36px] lg:leading-[56px] uppercase">
+                <h1 className="text-[24px] md:text-4xl font-bold uppercase">
                   About IT Phi Pvt. Ltd
                 </h1>
 
@@ -69,20 +70,6 @@ const AboutPage = () => {
           </div>
         </div>
 
-        {/*----------- section 4----------- */}
-
-        <div className="py-[70px] bg-primary text-main mb-10">
-          <div className=" w-full md:w-[70%] mx-auto flex flex-col gap-5 items-center justify-center">
-            <h3
-              className="text-[24px] md:text-[34px] font-semibold leading:[30px] md:leading-[45px] text-center px-4 capitalize"
-            >
-              We Deliver Work with Perfection
-            </h3>
-            <p className=" text-[16px] font-normal leading-[26px] text-center capitalize">
-              Our Dedication and Quality of services provided to our Clients takes them towards successful Business Model and that it self tells our Success Story. We provide Best Solutions to Retain each and every customer associated with IT Phi Pvt. Ltd.
-            </p>
-          </div>
-        </div>
 
         {/*----------- section 3----------- */}
         <div className="container mx-auto py-[70px] ">
@@ -102,7 +89,7 @@ const AboutPage = () => {
               data-aos-easing="ease-out-cubic"
               data-aos-duration="2000"
             >
-              <h1 className="font-bold text-[30px] lg:text-[42px] leading-[36px] lg:leading-[56px] uppercase mb-5">
+              <h1 className="text-[24px] md:text-4xl font-bold uppercase mb-5">
                 Our Goal
               </h1>
               <p className="font-normal text-[16px] leading-[32px]">
@@ -122,6 +109,21 @@ const AboutPage = () => {
         </div>
 
 
+        {/*----------- section 4----------- */}
+
+        <div className="py-[70px] bg-primary text-main mb-10">
+          <div className=" w-full md:w-[70%] mx-auto flex flex-col gap-5 items-center justify-center">
+            <h3
+              className="text-[24px] md:text-4xl font-bold text-center px-4 capitalize"
+            >
+              We Deliver Work with Perfection
+            </h3>
+            <p className=" text-[16px] font-normal leading-[26px] text-center capitalize">
+              Our Dedication and Quality of services provided to our Clients takes them towards successful Business Model and that it self tells our Success Story. We provide Best Solutions to Retain each and every customer associated with IT Phi Pvt. Ltd.
+            </p>
+          </div>
+        </div>
+<WhyChooseUs />
 
       </div>
     </>
