@@ -74,7 +74,7 @@ const Services = () => {
                                 {/* <div  className={`rounded-full w-16 h-16 flex items-center justify-center mx-auto shadow-lg transform -translate-y-12 bg-[#de8d4a] `}>
                                     {items.icon}
                                 </div> */}
-                                <h1 className="font-medium text-xl mb-3 lg:px-14 text-darken">{items.label}</h1>
+                                <h1 className="font-medium text-xl mb-3 lg:px-14 text-darken capitalize">{items.label}</h1>
                                 <ul class="about_list pt-3">
                                 {items?.list?.map((list,inx)=>(
                                     <li class="flex mt-5" key={inx}>
