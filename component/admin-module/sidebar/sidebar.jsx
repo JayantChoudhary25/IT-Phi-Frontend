@@ -1,5 +1,5 @@
 'use client'
-import {forwardRef, useState } from "react";
+import { forwardRef, useState } from "react";
 import { useRouter } from 'next/navigation'
 import { usePathname } from 'next/navigation'
 import Enquiry from "../dashboard-component/enquiry";
@@ -18,7 +18,7 @@ const menuList = [
     {
         id: 5,
         label: "apply for job",
-        component: <ApplyJobs/>,
+        component: <ApplyJobs />,
     },
     {
         id: 8,
@@ -32,6 +32,7 @@ const SideBar = forwardRef(({ showNav }, ref) => {
     const [show, setShow] = useState("Dashboard");
     const [labelId, setLabelId] = useState(1);
     const [activeSubMenuId, setActiveSubMenuId] = useState(null);
+    const [showDrawer, setShowDrawer] = useState(false)
     const pathname = usePathname()
 
     const handleClick = (label, id) => {
@@ -54,7 +55,21 @@ const SideBar = forwardRef(({ showNav }, ref) => {
     return (
         <>
             <div className="flex ">
-                <div ref={ref} className="h-screen w-[270px] bg-[#1e2433] py-[20px] text-main">
+
+                <div className="py-2 px-3  absolute top-3 flex flex-col gap-[5px] cursor-pointer lg:hidden"
+                    onClick={() => setShowDrawer(true)}>
+                    <div className="bg-black h-[2px] w-[20px]"></div>
+                    <div className="bg-black h-[2px] w-[20px]"></div>
+                    <div className="bg-black h-[2px] w-[20px]"></div>
+                </div>
+
+                <div ref={ref} className={`h-screen w-[270px] bg-[#1e2433] py-[20px] text-main relative 
+                ${showDrawer ? "block transition" : "hidden lg:block"}
+                `}>
+                    <div className="absolute  right-[15px] top-[15px] flex flex-col gap-[5px] cursor-pointer lg:hidden "
+                        onClick={() => setShowDrawer(false)}>
+                        <div className="">X</div>
+                    </div>
                     <div className="">
                         <Image
                             src="/svg/logo/logo-white.svg"
@@ -85,20 +100,9 @@ const SideBar = forwardRef(({ showNav }, ref) => {
                                 onClick={() => handleClick(items.label, items.id)}
                             >
                                 <div className="w-full">
-                                    {items.submenu ? (
-                                        <p
-                                            className=" capitalize whitespace-nowrap flex gap-8 "
-                                            onClick={() => handleSubMenuToggle(items.id)}
-                                        >
-                                            {items.label}
-                                            <span className="submenu-toggle ">
-                                            </span>
-                                        </p>
-                                    ) : (
-                                        <p className=" capitalize whitespace-nowrap ">
-                                            {items.label}
-                                        </p>
-                                    )}
+                                    <p className=" capitalize whitespace-nowrap ">
+                                        {items.label}
+                                    </p>
                                 </div>
                             </div>
                             // </Link>
@@ -129,7 +133,7 @@ const SideBar = forwardRef(({ showNav }, ref) => {
                         menuList.map((dashboardPage, inx) => (
                             <>
                                 {labelId === dashboardPage.id &&
-                                        dashboardPage.component
+                                    dashboardPage.component
                                 }
                             </>
                         ))

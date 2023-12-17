@@ -15,7 +15,7 @@ const CareersPage = () => {
     resume: null, // New field for resume file
   })
   const [isLoading, setLoading] = useState(false)
-
+  const [imageDisable, setImageDisable] = useState(false)
   const refreshData = () => {
     setApplicatinDetails({
       fName: "",
@@ -35,6 +35,8 @@ const CareersPage = () => {
   const inputHandler = (e) => {
     setApplicatinDetails({ ...applicatinDetails, [e.target.name]: e.target.value })
   }
+
+  
   const handleSubmit = async (e) => {
     e.preventDefault()
     setLoading(true)
@@ -66,7 +68,7 @@ const CareersPage = () => {
     "QA engineer",
     "Digital Marketing Specialist",
   ];
-  
+
   return (
     <>
       <section className="bg-#f0fbff] py-[170px]">
@@ -100,8 +102,8 @@ const CareersPage = () => {
                     >
                       Application Form
                     </h4>
-                    <p className="text-16px md:text-[18x] font-medium leading-[26px] mt-1">
-                    Thank you for your interest in joining the It Phi Pvt. ltd. Team!
+                    <p className="text-16px md:text-[18x] font-medium leading-[26px] mt-3">
+                      Thank you for your interest in joining the It Phi Pvt. ltd. Team!
                     </p>
                   </div>
                   <div className="w-full">
@@ -123,25 +125,26 @@ const CareersPage = () => {
                   <div className="w-full">
                     <select className='user-input capitalize' name="jobs" value={applicatinDetails.jobs} onChange={inputHandler} >
                       <option className='text-gray'> select jobs </option>
-                      {jobsOptions.map((jobs)=>(
-                      <option value={jobs}> {jobs}</option>
+                      {jobsOptions.map((jobs) => (
+                        <option value={jobs}> {jobs}</option>
                       ))}
                     </select>
                   </div>
                   <div className="w-full">
-          <label htmlFor="resume" className="text-16px md:text-[18x] font-medium leading-[26px] mb-1">
-            Upload Resume
-          </label>
-          <input
-            type="file"
-            id="resume"
-            name="resume"
-            accept=".pdf, .doc, .docx" // Specify accepted file formats
-            onChange={fileInputChangeHandler}
-            className="user-input"
-            required
-          />
-        </div>
+                    <label htmlFor="resume" className="text-16px md:text-[18x] font-medium leading-[26px] mb-1">
+                      Upload Resume
+                    </label>
+                    <input
+                      type="file"
+                      id="resume"
+                      name="resume"
+                      // disabled={imageDisable}
+                      className="user-input w-full bg-white "
+                      onChange={fileInputChangeHandler}
+                      accept=".pdf, .doc, .docx"
+                    />
+                  </div>
+                  
                   <div className="col-span-2 ml-auto">
                     <button className='btn-secondary hover:bg-[#3cc1df] hover:border-white' type='submit' disabled={isLoading}> {isLoading ? "Loading ..." : "submit"}</button>
                   </div>

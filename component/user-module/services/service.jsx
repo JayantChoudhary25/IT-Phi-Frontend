@@ -63,14 +63,13 @@ const Services = () => {
                     >
                         SERVICES WE PROVIDE
                     </h3>
-             <div data-aos="flip-up" className="max-w-xl mx-auto text-center">
-                </div>
-                <div className="grid md:grid-cols-3 gap-x-10 gap-y-16 ">
+                    <div className="bg-[#54A3F2] w-[142px] mx-auto h-[3px] mt-[15px]"></div>
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-16 pt-10">
                     {
                         serviceData.map((items, index) => (
                             <div
                              data-aos="fade-up" 
-                            className="bg-white shadow-xl p-6 text-center rounded-xl border border-theme-color" key={index}>
+                            className="bg-white shadow-xl p-6 text-center rounded-2xl border border-[#f3f3f3] hover:border-theme-color shadow-2xl" key={index}>
                                 {/* <div  className={`rounded-full w-16 h-16 flex items-center justify-center mx-auto shadow-lg transform -translate-y-12 bg-[#de8d4a] `}>
                                     {items.icon}
                                 </div> */}

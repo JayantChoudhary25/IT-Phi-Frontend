@@ -39,7 +39,7 @@ const AdminLogin = () => {
     <>
       <section className="py-[100px] bg-primary h-auto lg:h-[100vh] flex flex-col justify-center items-center">
         <div className="container mx-auto">
-          <div className="rounded-md border border-stroke bg-[linear-gradient(45deg,#1b3138,#61adc5d9)] text-white shadow-default dark:border-strokedark dark:bg-boxdark py-[50px] px-[50px]">
+          <div className="rounded-[10px] border border-stroke bg-[linear-gradient(45deg,#1b3138,#61adc5d9)] text-white shadow-default dark:border-strokedark dark:bg-boxdark py-[80px] px-[50px]">
             <div className="flex flex-wrap items-center">
               <div className="hidden w-full xl:block xl:w-1/2">
                 <div className="py-17.5 px-26 text-center">
@@ -183,40 +183,40 @@ const AdminLogin = () => {
                   />
                   <form onSubmit={handleLogin}>
 
-                    <div className="flex flex-col justify-center items-center gap-6 px-[20px]">
+                    <div className="flex flex-col justify-center items-center  px-[20px] md:w-[80%] mx-auto pt-8">
                       <div className="w-full">
-                        <label className="mb-2.5 block font-medium text-black dark:text-white">
+                        {/* <label className="mb-1 block text-[14px] font-normal text-black dark:text-white">
                           Email
-                        </label>
+                        </label> */}
                         <div className="relative">
                           <input
                             type="email"
                             name="username"
-                            placeholder="Enter your email"
-                            className="custom-input"
+                            placeholder="Email address"
+                            className="w-full rounded-lg border border-stroke bg-transparent py-3 pl-6 pr-10 outline-none focus:border-primary focus-visible:shadow-none dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary"
                             required
                             onChange={inputHandler}
                           />
                         </div>
                       </div>
 
-                      <div className="w-full">
-                        <label className="mb-2.5 block font-medium text-black dark:text-white">
+                      <div className="w-full pt-6">
+                        {/* <label className="mb-1 block text-[14px] font-normal text-black dark:text-white">
                           Password
-                        </label>
+                        </label> */}
                         <div className="relative">
                           <input
                             type="password"
                             name="password"
                             placeholder="Password"
-                            className="w-full rounded-lg border border-stroke bg-transparent py-4 pl-6 pr-10 outline-none focus:border-primary focus-visible:shadow-none dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary"
+                            className="w-full rounded-lg border border-stroke bg-transparent py-3 pl-6 pr-10 outline-none focus:border-primary focus-visible:shadow-none dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary"
                             required
                             onChange={inputHandler}
                           />
                         </div>
                       </div>
 
-                      <div className="w-full">
+                      <div className="w-full pt-8">
                         <input
                           type="submit"
                           value={isLoading ? "Loading..." : "Sign In"}
@@ -225,7 +225,7 @@ const AdminLogin = () => {
                         />
                       </div>
 
-                      <div className="text-center">
+                      <div className="text-center pt-4">
                         <p>
                           <Link href="/admin/change-password" className="text-main underline capitalize">
                             change password

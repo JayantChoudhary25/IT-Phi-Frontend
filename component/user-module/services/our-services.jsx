@@ -58,7 +58,7 @@ const OurServices = () => {
             </div>
             <div className="bg-[#f4fbfe] py-[80px]">
                 <div className="container mx-auto">
-                    <div className="grid grid-cols-3 justify-center">
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 justify-center">
                         {
                             ourServices.map((items, index) => (
                                 <div className="w-full ">
